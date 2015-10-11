@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lukas.euglenapatterns.FreeDrawActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/current_pic"
+        android:layout_width="1960px"
+        android:layout_height="1102px"
+        android:layout_centerHorizontal="true"
+        >
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="980dp"
+        android:layout_height="551dp"
+        android:layout_alignLeft="@+id/current_pic"
+        android:onClick="focus"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/drawing_pad"
+        android:layout_width="980dp"
+        android:layout_height="551dp"
+        android:layout_alignLeft="@+id/camera_preview"
+        >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/select_color"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Select Color"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@android:color/holo_green_dark"
+        />
+
+    <GridLayout
+        android:id="@+id/colors"
+        android:layout_width="300dp"
+        android:layout_height="481dp"
+        android:rowCount="5"
+        android:columnCount="2"
+        android:layout_below="@+id/select_color"
+        android:background="@drawable/grid"
+        >
+
+        <Button
+            android:id="@+id/black"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_black"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/white"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_white"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_blue"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_red"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/yellow"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_yellow"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/green"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/button_green"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/button_toggle"
+            android:text="Toggle"
+            android:textSize="25dp"
+            android:layout_width="120dp"
+            android:layout_height="75dp"
+            android:onClick="toggle"
+            android:layout_gravity="center"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="120dp"
+            android:layout_height="75dp"
+            android:text="Clear"
+            android:textSize="25dp"
+            android:onClick="clear"
+            android:layout_gravity="center"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/select_pattern"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Select Pattern"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/holo_green_dark"
+        />
+
+    <ListView
+        android:id="@+id/pattern_selection"
+        android:layout_width="300dp"
+        android:layout_height="481dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/select_pattern"
+        android:background="@drawable/grid"
+        >
+    </ListView>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:background="@drawable/back_button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="31.33dp"
+        android:layout_marginBottom="45dp"
+        android:onClick="finish"
+        />
+
+    <!--<GridLayout
+        android:id="@+id/colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="4"
+        android:layout_below="@+id/current_pic"
+        android:layout_toLeftOf="@+id/pattern_selection"
+        >
+
+        <Button
+            android:id="@+id/black"
+            android:layout_width="228px"
+            android:layout_height="228px"
+            android:background="@drawable/button_black"
+            android:layout_margin="10px"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/white"
+            android:layout_width="228px"
+            android:layout_height="228px"
+            android:background="@drawable/button_white"
+            android:layout_margin="10px"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="228px"
+            android:layout_height="228px"
+            android:background="@drawable/button_blue"
+            android:layout_margin="10px"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="300px"
+            android:layout_height="150px"
+            android:text="Clear"
+            android:onClick="clear"
+            />
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="228px"
+            android:layout_height="228px"
+            android:background="@drawable/button_red"
+            android:layout_margin="10px"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/yellow"
+            android:layout_width="228px"
+            android:layout_height="228px"
+            android:background="@drawable/button_yellow"
+            android:layout_margin="10px"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/green"
+            android:layout_width="228px"
+            android:layout_height="228px"
+            android:background="@drawable/button_green"
+            android:layout_margin="10px"
+            android:onClick="changeColor"
+            />
+
+        <Button
+            android:id="@+id/button_toggle"
+            android:text="Toggle"
+            android:layout_width="300px"
+            android:layout_height="150px"
+            android:onClick="toggle"
+            />
+    </GridLayout>-->
+
+    <Button
+        android:id="@+id/learn_more"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:background="@drawable/light_bulb_on"
+        android:layout_toLeftOf="@+id/help"
+        android:layout_marginRight="31.33dp"
+        android:layout_marginBottom="45dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="learnMore"
+
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:background="@drawable/question_mark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="31.33dp"
+        android:onClick="help"
+        />
+
+    <Button
+        android:id="@+id/auto_focus"
+        android:layout_toRightOf="@+id/colors"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="21.5dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Focus"
+        android:textSize="25dp"
+        android:onClick="focus"
+        />
+
+    <Button
+        android:id="@+id/start"
+        android:text="Auto On"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_above="@+id/open"
+        android:layout_toRightOf="@+id/auto_focus"
+        android:onClick="start"
+        />
+
+    <Button
+        android:id="@+id/open"
+        android:text="Light Off"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/auto_focus"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="open"
+        />
+
+    <Button
+        android:id="@+id/button_capture"
+        android:text="Save"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/button_share"
+        android:layout_toLeftOf="@+id/switch_view"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="snapPic"
+        />
+
+    <Button
+        android:id="@+id/button_share"
+        android:text="Share"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/switch_view"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginRight="16dp"
+        />
+
+    <Button
+        android:id="@+id/switch_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Still"
+        android:textSize="25dp"
+        android:layout_toLeftOf="@id/pattern_selection"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginRight="16dp"
+        android:onClick="switchView"
+        />
+
+    <!--<Button
+        android:id="@+id/close"
+        android:text="Close"
+        android:layout_width="250px"
+        android:layout_height="200px"
+        android:layout_toRightOf="@+id/colors"
+        android:onClick="close"
+        android:textSize="40px"
+        android:layout_alignParentBottom="true"
+        />-->
+
+    <!--<Button
+        android:id="@+id/pause"
+        android:text="Pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/button_capture"
+        android:layout_alignParentBottom="true"
+        android:onClick="pause"
+        />-->
+
+
+
+    <!--temp-->
+    <ImageView
+        android:id="@+id/gif1"
+        android:layout_width="200px"
+        android:layout_height="112px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="250px"
+        android:src="@drawable/pattern1"
+        android:onClick="updateGIF"
+
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500"
+        android:textSize="40px"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/gif1"
+
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/gif2"
+        android:layout_width="200px"
+        android:layout_height="112px"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/a"
+        android:layout_toRightOf="@+id/edit_text"
+        android:onClick="updateGIF"
+
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/gif3"
+        android:layout_width="200px"
+        android:layout_height="112px"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/x"
+        android:layout_toRightOf="@+id/gif2"
+        android:onClick="updateGIF"
+
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

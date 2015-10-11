@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.lukas.euglenapatterns.GameActivity">
+
+    <item android:id="@+id/auto_focus"
+        android:icon="@drawable/camera"
+        android:title="AutoFocus"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/connect_bluetooth"
+        android:icon="@drawable/bluetooth"
+        android:title="Bluetooth"
+        app:showAsAction="always" />
+</menu>

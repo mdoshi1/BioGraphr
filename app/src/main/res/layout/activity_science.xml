@@ -1,0 +1,198 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lukas.euglenapatterns.ScienceActivity">
+
+    <ImageView
+        android:id="@+id/current_pic"
+        android:layout_width="980dp"
+        android:layout_height="551dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="980dp"
+        android:layout_height="551dp"
+        android:layout_centerHorizontal="true"
+        >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/select_experiment"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Select Experiment"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@android:color/holo_green_dark"
+        />
+
+    <RelativeLayout
+        android:id="@+id/experiments"
+        android:layout_width="300dp"
+        android:layout_height="481dp"
+        android:layout_below="@+id/select_experiment"
+        android:background="@drawable/grid"
+        >
+
+        <ImageButton
+            android:id="@+id/four_color"
+            android:layout_width="260dp"
+            android:layout_height="146dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="63dp"
+            android:src="@drawable/science_color"
+            android:onClick="changePattern"
+            />
+
+        <ImageButton
+            android:id="@+id/four_pattern"
+            android:layout_width="260dp"
+            android:layout_height="146dp"
+            android:layout_below="@+id/four_color"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="63dp"
+            android:src="@drawable/science_pattern"
+            android:onClick="changePattern"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Explanation"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/holo_green_dark"
+        />
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="300dp"
+        android:layout_height="481dp"
+        android:layout_below="@+id/explanation"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/grid"
+        >
+
+        <Button
+            android:id="@+id/learn_more"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:background="@drawable/light_bulb_on"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:onClick="learnMore"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="31.33dp"
+        android:background="@drawable/back_button"
+        android:layout_alignParentBottom="true"
+        android:onClick="finish"
+        />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:background="@drawable/question_mark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="31.33dp"
+        android:onClick="help"
+        />
+
+    <Button
+        android:id="@+id/auto_focus"
+        android:layout_toRightOf="@+id/experiments"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="21.5dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Focus"
+        android:textSize="25dp"
+        android:onClick="focus"
+        />
+
+    <Button
+        android:id="@+id/start"
+        android:text="Auto Off"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_above="@+id/open"
+        android:layout_toRightOf="@+id/auto_focus"
+        android:onClick="start"
+        />
+
+    <Button
+        android:id="@+id/open"
+        android:text="Light On"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/auto_focus"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="open"
+        />
+
+    <Button
+        android:id="@+id/button_capture"
+        android:text="Save"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/button_share"
+        android:layout_toLeftOf="@+id/switch_view"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="snapPic"
+        />
+
+    <Button
+        android:id="@+id/button_share"
+        android:text="Share"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/switch_view"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginRight="16dp"
+        />
+
+    <Button
+        android:id="@+id/switch_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="Still"
+        android:textSize="25dp"
+        android:layout_toLeftOf="@id/info"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginRight="16dp"
+        android:onClick="switchView"
+        />
+</RelativeLayout>

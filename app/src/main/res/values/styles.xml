@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/ActionBarTheme</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ActionBarTheme</item>
+
+        <item name="android:windowBackground">@color/light_green</item>
+        <item name="android:colorBackground">@color/light_green</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/dark_green</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/dark_green</item>
+    </style>
+
+    <color name="dark_green" type="color">#FF3F5F3F</color>
+    <color name="light_green" type="color">#FF7FBF7F</color>
+
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/choose"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lukas.euglenapatterns.GameActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:id="@+id/choose_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="How many players?"
+            android:textSize="50dp"
+            />
+
+        <Button
+            android:id="@+id/one_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="1 Player"
+            android:textSize="40dp"
+            android:layout_below="@+id/choose_players"
+            android:onClick="onePlayer"
+
+            android:clickable="false"
+            />
+
+        <Button
+            android:id="@+id/two_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="2 Players"
+            android:textSize="40dp"
+            android:layout_below="@+id/one_player"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/all_patterns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All patterns"
+            android:textSize="40dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@+id/two_players"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/large_to_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large to small"
+            android:textSize="40dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@+id/all_patterns"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/small_to_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small to large"
+            android:textSize="40dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@+id/large_to_small"
+            android:onClick="chooseGameType"
+            />
+
+        <!--<Button
+            android:id="@+id/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only small"
+            android:textSize="100px"
+
+            android:layout_below="@+id/small_to_large"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only medium"
+            android:textSize="100px"
+
+            android:layout_below="@+id/small"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only large"
+            android:textSize="100px"
+
+            android:layout_below="@+id/medium"
+            android:onClick="chooseGameType"
+            />-->
+
+        <Button
+            android:id="@+id/fixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fixed"
+            android:textSize="40dp"
+            android:layout_below="@+id/small_to_large"
+            android:layout_centerHorizontal="true"
+
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/one_player_color_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Color: Level 1"
+            android:textSize="40dp"
+            android:layout_below="@+id/fixed"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/one_player_color_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Color: Level 2"
+            android:textSize="40dp"
+            android:layout_below="@+id/one_player_color_one"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/one_player_color_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Color: Level 3"
+            android:textSize="40dp"
+            android:layout_below="@+id/one_player_color_two"
+            android:onClick="chooseGameType"
+            />
+
+        <Button
+            android:id="@+id/two_players_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="2 Players (Color)"
+            android:textSize="40dp"
+            android:layout_below="@+id/one_player_color_three"
+            android:onClick="chooseGameType"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_marginLeft="31.33dp"
+        android:layout_marginTop="596dp"
+        android:background="@drawable/back_button"
+        android:onClick="finish"
+        />
+
+</RelativeLayout>

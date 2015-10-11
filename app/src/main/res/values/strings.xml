@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Euglena Patterns</string>
+    <string name="app_id">DF8B73F3</string>
+    <string name="address">00:06:66:67:E8:99</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_game">GameActivity</string>
+    <color name="white">#FF000000</color>
+    <string name="title_activity_callibrate">CallibrateActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_free_draw">FreeDrawActivity</string>
+    <string name="title_activity_science">ScienceActivity</string>
+</resources>

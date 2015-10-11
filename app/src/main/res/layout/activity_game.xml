@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lukas.euglenapatterns.GameActivity">
+
+    <Button
+        android:id="@+id/new_game"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/current"
+        android:background="@drawable/play"
+        android:onClick="newGame"
+        />
+
+    <!--<Button
+        android:id="@+id/stop"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:text="Stop"
+        android:clickable="false"
+        android:layout_below="@id/current"
+        android:layout_marginLeft="60px"
+        android:onClick="stop"
+        />-->
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="1px"
+        android:layout_height="1px">
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/current"
+        android:layout_width="835.5dp"
+        android:layout_height="470dp"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/round_edges"
+        android:onClick="focus"
+        />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="Pattern 0/0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignLeft="@+id/current"
+        android:layout_below="@id/current"
+        />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer: 0:00"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@+id/current"
+        android:layout_alignRight="@id/current"
+        />
+
+    <TextView
+        android:id="@+id/penalty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Penalty: +0:00"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@+id/timer"
+        android:layout_alignRight="@+id/current"
+        />
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:     "
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@+id/level"
+        android:layout_alignLeft="@+id/level"
+        />
+
+    <ImageButton
+        android:id="@+id/option0"
+        android:layout_width="201.375dp"
+        android:layout_height="113.323dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/current"
+        android:layout_below="@+id/new_game"
+        android:onClick="compare"
+        />
+
+    <ImageButton
+        android:id="@+id/option1"
+        android:layout_width="201.375dp"
+        android:layout_height="113.323dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/option0"
+        android:layout_below="@+id/new_game"
+        android:onClick="compare"
+        />
+
+    <ImageButton
+        android:id="@+id/option2"
+        android:layout_width="201.375dp"
+        android:layout_height="113.323dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/option3"
+        android:layout_below="@+id/new_game"
+        android:onClick="compare"
+        />
+
+    <ImageButton
+        android:id="@+id/option3"
+        android:layout_width="201.375dp"
+        android:layout_height="113.323dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/current"
+        android:layout_below="@+id/new_game"
+        android:onClick="compare"
+        />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:background="@drawable/back_button"
+        android:layout_below="@+id/new_game"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="31.33dp"
+        android:onClick="finish"
+        />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:background="@drawable/question_mark"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/new_game"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="31.33dp"
+        android:onClick="help"
+        />
+
+</RelativeLayout>
